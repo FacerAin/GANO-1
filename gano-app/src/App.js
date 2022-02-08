@@ -1,15 +1,13 @@
 import "./App.css";
-import Header from "./components/common/Header";
-import PatientList from "components/patient/PatientList"
-import RoomList from "components/patient/RoomList"
-
+import { Route, Routes } from "react-router-dom";
+import PatientsPage from "pages/Patients";
+import DetailPage from "pages/Detail";
 function App() {
   return (
-    <>
-      <Header />
-      <RoomList/>
-      <PatientList/>
-    </>
+    <Routes>
+      <Route path="/" element={<PatientsPage />} />
+      <Route path="/detail" element={<DetailPage />} />
+    </Routes>
   );
 }
 
